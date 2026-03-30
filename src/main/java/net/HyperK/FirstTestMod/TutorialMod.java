@@ -63,6 +63,10 @@ public class TutorialMod
             event.accept(ModItems.ALEXANDRITE);
             event.accept(ModItems.RAW_ALEXANDRITE);
         }
+
+        if(event.getTabKey() == CreativeModeTabs.COMBAT){
+            event.accept(ModItems.HYPERK_MASK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

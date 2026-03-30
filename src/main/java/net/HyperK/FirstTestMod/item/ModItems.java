@@ -27,11 +27,18 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     //---------------------------------------------------------
-    //ADDING RAW ALEXANDRITE ITEM
+    //ADDING RAW_ALEXANDRITE ITEM
     //---------------------------------------------------------
 
     public static final RegistryObject<Item> RAW_ALEXANDRITE = ITEMS.register("raw_alexandrite",
             () -> new Item(new Item.Properties()));
+
+    //---------------------------------------------------------
+    //ADDING HYPERK_MASK
+    //---------------------------------------------------------
+    public static final RegistryObject<Item> HYPERK_MASK = ITEMS.register("hyperk_mask",
+            () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
