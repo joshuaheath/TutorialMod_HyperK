@@ -15,10 +15,22 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
+
+    //---------------------------------------------------------
+    //ADDING ALEXANDRITE ITEM
     //We are registering an object of type "Item"
     //"ALEXANDRITE" is the items defered register
+    //---------------------------------------------------------
+
     public static final RegistryObject<Item> ALEXANDRITE = ITEMS.register("alexandrite",
             //Adding the item into the game
+            () -> new Item(new Item.Properties()));
+
+    //---------------------------------------------------------
+    //ADDING RAW ALEXANDRITE ITEM
+    //---------------------------------------------------------
+
+    public static final RegistryObject<Item> RAW_ALEXANDRITE = ITEMS.register("raw_alexandrite",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {

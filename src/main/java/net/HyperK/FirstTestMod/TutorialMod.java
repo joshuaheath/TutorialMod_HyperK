@@ -54,9 +54,14 @@ public class TutorialMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
-        //Adding custom item "ALEXANDRITE" to the ingreadients tab
+        //---------------------------------------------------------
+        //ADDING ITEMS TO INGREADIENTS CREATIVE TAB
+        //---------------------------------------------------------
+
+        //If the creativeModTab of Ingreadients is selected, add item from the ModItems Class (Ie. ALEXANDRITE)
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.ALEXANDRITE);
+            event.accept(ModItems.RAW_ALEXANDRITE);
         }
     }
 
