@@ -1,6 +1,7 @@
 package net.HyperK.FirstTestMod;
 
 import com.mojang.logging.LogUtils;
+import net.HyperK.FirstTestMod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -33,6 +34,9 @@ public class TutorialMod
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        //Passing the eventBus into the register class inside of the "modItems" class
+        ModItems.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
