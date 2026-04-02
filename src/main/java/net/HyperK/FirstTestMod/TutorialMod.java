@@ -87,6 +87,12 @@ public class TutorialMod
         }
         //---------------------------------------------------------------------------
 
+        //---------------------------------------------------------------------------
+        //ADDING ITEMS TO TOOLS_AND_UTILITIES CREATIVE TAB
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModBlocks.TEST_BLOCK);
+        }
+        //---------------------------------------------------------------------------
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

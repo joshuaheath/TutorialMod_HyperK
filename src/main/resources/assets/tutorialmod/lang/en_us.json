@@ -1,9 +1,11 @@
 {
   "item.tutorialmod.alexandrite": "Alexandrite",
   "item.tutorialmod.raw_alexandrite": "Raw Alexandrite",
-  "item.tutorialmod.hyperk_mask": "HyperK's Mask",
 
   "block.tutorialmod.alexandrite_block": "Block of Alexandrite",
-  "block.tutorialmod.raw_alexandrite_block": "Block of Raw Alexandrite"
+  "block.tutorialmod.raw_alexandrite_block": "Block of Raw Alexandrite",
+
+  "item.tutorialmod.hyperk_mask": "HyperK's Mask",
+  "block.tutorialmod.test_block": "Test Block"
 
 }

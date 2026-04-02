@@ -31,7 +31,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK = registerBlock("raw_alexandrite_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops()));
+                    .strength(3f)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TEST_BLOCK = registerBlock("test_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1f)
+                    .sound(SoundType.NETHERITE_BLOCK)
+                    .destroyTime(2f)));
     //---------------------------------------------------------------------------
 
     //---------------------------------------------------------------------------
