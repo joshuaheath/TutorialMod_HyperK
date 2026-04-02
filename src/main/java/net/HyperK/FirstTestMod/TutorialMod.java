@@ -1,6 +1,7 @@
 package net.HyperK.FirstTestMod;
 
 import com.mojang.logging.LogUtils;
+import net.HyperK.FirstTestMod.block.ModBlocks;
 import net.HyperK.FirstTestMod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -37,8 +38,15 @@ public class TutorialMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        //---------------------------------------------------------------------------
         //Passing the eventBus into the register class inside of the "modItems" class
         ModItems.register(modEventBus);
+        //---------------------------------------------------------------------------
+
+        //---------------------------------------------------------------------------
+        //REGISTERING THE "ModBlocks class
+        ModBlocks.register(modEventBus);
+        //---------------------------------------------------------------------------
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -56,17 +64,28 @@ public class TutorialMod
 
         //---------------------------------------------------------
         //ADDING ITEMS TO INGREADIENTS CREATIVE TAB
-        //---------------------------------------------------------
 
         //If the creativeModTab of Ingreadients is selected, add item from the ModItems Class (Ie. ALEXANDRITE)
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.ALEXANDRITE);
             event.accept(ModItems.RAW_ALEXANDRITE);
         }
+        //---------------------------------------------------------
 
+        //---------------------------------------------------------------------------
+        //ADDING ITEMS TO INGREADIENTS CREATIVE TAB
         if(event.getTabKey() == CreativeModeTabs.COMBAT){
             event.accept(ModItems.HYPERK_MASK);
         }
+        //---------------------------------------------------------------------------
+
+        //---------------------------------------------------------------------------
+        //ADDING ITEMS TO BLOCK CREATIVE TAB
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
+        }
+        //---------------------------------------------------------------------------
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
